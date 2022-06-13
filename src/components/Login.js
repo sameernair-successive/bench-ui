@@ -1,11 +1,17 @@
 import React from 'react'
 import { RiGoogleLine } from "react-icons/ri";
 import { GoogleLogin } from 'react-google-login';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
+  let navigate = useNavigate();
+
   const responseGoogle = (response) => {
-    console.log(response);
+    const result = response?.profileObj;
+    const token = response?.tokenId;
+    console.log(response, result, token);
+    navigate('/dashboard');
   }
 
   return (

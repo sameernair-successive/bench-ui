@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
 import { gapi } from 'gapi-script';
-import Container from './components/Container';
-import Login from './components/Login';
+import Home from './components/Home';
+import Dashboard from './components/Dashboard';
+import AddEmployee from './components/AddEmployee';
+import EditEmployee from './components/EditEmployee';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -16,9 +19,13 @@ function App() {
   });
 
   return (
-    <div className='flex max-w-full'>
-      <Container />
-      <Login />
+    <div>
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/employees/add" element={<AddEmployee />} />
+        <Route path="/employees/edit/:id" element={<EditEmployee />} />
+      </Routes>
     </div>
   );
 }
