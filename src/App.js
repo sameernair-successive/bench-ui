@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { gapi } from 'gapi-script';
 import Home from './components/Home';
+import { Routes, Route } from "react-router-dom";
 import Dashboard from './components/Dashboard';
 import AddEmployee from './components/AddEmployee';
 import EditEmployee from './components/EditEmployee';
-import { Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
         scope: ""
       })
     };
-    gapi.load('client:auth2', start)    
+    gapi.load('client:auth2', start)
   });
 
   return (

@@ -8,7 +8,7 @@ module.exports = {
     "./src/components/AddButton.js",
     "./src/components/AddEmployee.js",
     "./src/components/EmployeesList.js",
-    ".src/components/EditEmployee.js",
+    ".src/components/EditEmployee.js"
   ],
   theme: {
     extend: {},
